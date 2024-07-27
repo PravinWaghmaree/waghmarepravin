@@ -1,0 +1,21 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+       if(nums.length==0){
+           return 0;
+       }
+    int cnt=0;
+        for(int i =0;i<nums.length;i++)
+        {
+            int numofdigit =0;
+            while(nums[i]!= 0){
+                nums[i]= nums[i]/10;
+                numofdigit++;
+            }
+            if(numofdigit%2==0){
+            cnt++    ;
+            }
+            
+        }
+        return cnt ;
+    }
+}
